@@ -17,11 +17,11 @@ class BlogDetailView(DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
 
-# AINDA PRECISA TIRAR DO USUÁRIO A TAREFA DE CRIAR O SLUG
+
 class BlogCreateView(SuccessMessageMixin, CreateView):
     model = Post
     template_name = 'blog/post_new.html'
-    fields = ('title', 'slug', 'content', 'author')
+    fields = ('title', 'content', 'author')
     success_message = "%(field)s criado com sucesso."
 
     def get_success_message(self, cleaned_data):

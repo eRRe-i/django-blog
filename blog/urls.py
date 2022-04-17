@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+#para assegurar o unique identifier, alterar pra algo além apenas do slug
 urlpatterns = [
     path('', views.BlogListView.as_view(), name='home'),
     path('post/new/', views.BlogCreateView.as_view(), name='post_new'),
